@@ -1,0 +1,797 @@
+@import "../plugin/owl-carousel/_owl-carousel";  
+@import "../plugin/owl-carousel/_owl-carousel-theme";
+/*@import "app";*/
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: #fff; 
+}   
+.owl-carousel {  
+   .owl-item {
+      float:left;  
+      .properties-for-sale-bg-img,.properties-for-rent-bg-img,.properties-for-vacation-bg-img { 
+         background-image: url("/storage/site-images/sale.jpg");   
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+         position: relative;
+         max-height: 80vh;
+         img {
+            visibility: hidden;
+         }
+         .text-heading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            a {
+               text-decoration: none;
+               cursor: pointer;
+
+               h1 {
+                  font-family: PlayfairDisplay;
+                  color: #ffffff;
+                  font-size: 73px;
+                  font-weight: 700;
+                  line-height: 59px;
+                  margin-top: 11px
+               }
+               .vacation-heading {
+                  font-size: 66px;
+               }
+               p {
+                  color: #ffffff;
+                  font-size: 34px;
+                  font-weight: 600;
+                  line-height: 59px;
+                  span {
+                     color: #13b2dc;
+                  }
+               }
+            }
+            a:hover {
+               color: #ece7e7 !important  ;
+            }
+         }
+      }
+   } 
+
+   .owl-dots {
+      position: absolute;
+      left: 47%;
+      bottom: 5%;
+   }
+}
+.textarea-height {
+   min-height: 150px !important;
+}
+.image-div {
+    .caption.main_single {
+        position: absolute;
+        top: 0;
+        background-color: rgba(128, 172, 210, 0.75);
+        bottom: 0;
+        text-align: center;
+        color: #fff;
+        display: block;
+        left: 15px;
+        width: calc(100% - 30px);
+        transition: all 0.5s ease-in-out;
+        display: none;
+        /*padding-top: 7vh;*/
+        .property-details.property-higlight {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width:100%;
+        }
+    }
+}
+.image-div:hover {
+    .caption.main_single {
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.property-higlight a{
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px #000000;
+    }
+    
+    .property-higlight a:hover{
+        transition: color 0.5s ease;
+        color: #EDEFF2;
+        text-shadow: 2px 2px 4px #630000;
+    }
+@media screen and (max-width: 1200px) {
+   .owl-carousel {  
+      .owl-item {
+         .properties-for-sale-bg-img,.properties-for-rent-bg-img,.properties-for-vacation-bg-img { 
+            .text-heading {
+               a {
+                  h1 {
+                     font-size: 5.9vw; 
+                  }
+                  .vacation-heading {
+                     font-size: 5vw;
+                     line-height: 51px;
+                  }
+                  p {
+                     font-size: 2.9vw;
+                  }
+                  .vacation-para {
+                     font-size: 2.5vw;
+                     line-height: 33px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 820px) {
+   .owl-carousel {  
+      .owl-item {
+         .properties-for-sale-bg-img,.properties-for-rent-bg-img,.properties-for-vacation-bg-img { 
+            .text-heading{
+               a {
+
+                  .vacation-heading {
+                     line-height: 40px;
+                  }
+                  .vacation-para {
+                     font-size: 2.5vw;
+                     line-height: 14px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .owl-carousel {  
+      .owl-item {
+         .properties-for-sale-bg-img,.properties-for-rent-bg-img,.properties-for-vacation-bg-img { 
+            .text-heading {
+               a {
+                  h1 {
+                     line-height: 7vw;
+                  }
+                  .vacation-heading {
+                     font-size: 5.7vw;
+                  }
+                  .vacation-para {
+                     font-size: 2.8vw;
+                  }
+                  p {
+                     font-size: 3vw;
+                     line-height: 4vw;
+                  }
+               }
+            }
+         }
+      }
+      .owl-dots {
+         left: 45%;
+      }
+   }
+}@media screen and (max-width: 460px) {
+   .owl-carousel {  
+      .owl-item {
+         .properties-for-sale-bg-img,.properties-for-rent-bg-img,.properties-for-vacation-bg-img { 
+            .text-heading {
+               a {
+                  .vacation-heading {
+                     font-size: 7vw;
+                     line-height: 34px;
+                  }
+                  .vacation-para {
+                     font-size: 3.4vw;
+                     line-height: 10px;
+                  }
+               }
+            }
+         }
+      }
+      .owl-dots {
+         left: 41%;
+      }
+   }
+}
+
+.owner-sol-offers-row {
+   .owner-sol-offers {
+      text-align: center;
+      h3 {
+         color: #222222;
+         font-size: 32px;
+         font-weight: 700;
+         line-height: 35px;
+         text-transform: uppercase;
+         margin-bottom: 6px;
+         /*margin-top: 0*/
+      }
+      p {
+         color: #727272;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 23px;
+         text-transform: uppercase;
+      } 
+      .bottom-para {
+         width:100%;
+         p{
+            text-transform: none;
+            line-height: 24px;
+            padding-top: 10px;
+         }
+      }
+   }
+}
+@media screen and (max-width: 991px) {
+   .owner-sol-offers-row {
+      .owner-sol-offers {
+         .bottom-para {
+            padding: 0 0;
+         }
+      }
+   }
+   #rent, #sale, #Vacation{
+       .image-div {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+   }
+}
+@media screen and (max-width: 803px) {
+   .owner-sol-offers-row {
+      .owner-sol-offers {
+         .heading-para {
+            h3 {
+               font-size: 3.9vw;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 550px) {
+   .owner-sol-offers-row {
+      .owner-sol-offers {
+         h3 {
+            font-size: 5.5vw;
+         }
+      }
+   }
+}
+.all-icons-row {
+   padding-top:45px;
+   .home-tools-row  {
+      text-align: center;
+      .img-div {
+         padding-left: 0;
+         padding-right:0;
+         img {
+            padding-bottom: 20px;
+            margin: 0 auto;
+         }
+         .img-tools { 
+            padding-bottom: 22px;
+         }
+         p {
+            color: #222222;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 23px;
+            margin: 0 0 0 ;
+         }
+         .btn-read-more {
+            padding: 9px 0;
+            margin-top: 33px;
+            a {
+               text-decoration: none;
+               background-color: #27bbe3;
+               color: #fff;
+               padding: 9px 45px;
+               text-transform: uppercase;
+               font-size: 12px;
+               font-weight: 600;
+               line-height: 23px;
+               border-radius: 23px;
+               margin: -8px 0px;
+            }
+            a:hover {
+               color:  #27bbe3;
+               background-color: #fff;
+               border: 1px solid #27bbe3;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 886px) {
+   .all-icons-row {
+      .home-tools-row  {
+         .img-div {
+            p {
+               height: 69px;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+    .all-icons-row {
+       padding: 0 0;
+       margin: 0;
+       .home-tools-row  {
+          .img-div {
+             padding-bottom: 30px;
+             p {
+                height: auto;
+             }
+          }
+          .marketplace-div {
+             padding-bottom: 0;
+          }
+       }
+    }
+    .contact-us.btns-green-blue {
+        a.btn {
+            //margin: 0 0 0 15px !important;
+            padding: 15px 20px;
+            font-size: 14px;    
+        }
+    }
+    .recent-listings {
+        padding-bottom: 30px;
+        .bs-example.bs-example-tabs {
+            ul.nav-tabs {
+                a.btn-main {
+                    padding: 8px 30px;
+                    font-size: 14px;
+                }
+            }
+            .tab-content {
+                padding: 0 30px;
+                .image-div {
+                    padding-right: 5px;
+                    margin-bottom: 10px;
+                }
+                .image-div:nth-of-type(2n) {
+                    /*padding-left: 5px;*/
+                    /*padding-right: 15px;*/
+                }
+                .image-div {
+                    .caption.main_single {
+                            width: calc(100% - 20px);
+                      }
+                }
+            }
+        }
+    }
+}
+.recent-home-icon {
+   clear: both;
+}
+.recent-listings {
+   padding-bottom:45px;
+   .heading-para {
+      text-align: center;
+      text-transform:uppercase;
+      h3 {
+         margin-bottom: 6px;
+         color: #222222;
+         font-size: 32px;
+         font-weight: 700;
+         line-height: 23px;
+      }
+      p {
+         color: #615f5f;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 23px;
+      }
+   }
+   .images-row {
+      .nested-div {
+         padding-top: 10px;
+      }
+      .recent-listings-img {
+         img {
+            width: 100%;
+         }
+      }
+   }
+    .bs-example.bs-example-tabs {
+        float: left;
+        width: 100%;
+        ul.nav-tabs {
+            margin: 30px 0;
+            border-bottom: 0;
+            a.active, .btn-main:active, .btn-main:focus, .btn-main:hover {
+                background-color: #25bbe2;
+                color: #fff;
+                border-color: #25bbe2;
+            }
+            .btn-main {
+               background-color: #92c800;
+                color: #fff;
+                border-radius: 3px;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 400;
+                padding: 8px 45px;
+                margin: 5px;
+                line-height: 15px;
+            }
+        }
+        .image-div {
+            .listing-image-div {
+                /*height: 225px;*/
+                /*display: table;*/
+            }
+            img {
+                width: 100%;
+                /*height: 100%;*/
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+   .recent-listings { 
+      .images-row {
+         margin: 0;
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .recent-listings { 
+      .images-row {
+         .recent-listings-img {
+            padding: 15px 15px 0px;
+         }
+         .p-bottom-0 {
+            padding-bottom: 0; 
+         }
+      }
+   }
+}
+.our_owners_sol:after {
+    bottom: 0;
+}
+.our_owners_sol {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+}
+.our_owners_sol:before,
+.our_owners_sol:after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    display: block;
+    height: 10px;
+    background-color: rgba(0,0,0,0.7);
+}
+.our_owners_sol:before {
+    top: 0;
+}
+.explore-our-listings {
+   padding: 30px 0;
+   text-align: center;
+   a {
+      border-radius: 20px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #1ac0ec;
+      box-sizing: border-box;
+      color: #1ac0ec;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 10px;
+      padding: 15px 53px;
+      text-decoration: none;
+      text-transform: uppercase;
+   }
+   a:hover {
+      color:#fff;
+      background-color: #1ac0ec;
+   }
+}
+.realtors-contractors-bg-img {
+   background-image: url(/storage/site-images/black-bg.jpg);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   position: relative;
+   margin:0;
+   float: left;
+   width: 100%;
+   img {
+      visibility: hidden;
+      height: 1px;
+   }
+    .realtors-contractors-text {
+        margin: 60px auto;
+        /*background-color: #272727;*/
+        float: none;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        h2 {
+            margin-top: 0;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 20px;
+            padding-top: 10px;
+            span {
+                display: block;
+                padding-top: 30px;
+                padding-bottom: 8px;
+            }
+            .para-green {
+                color: #9cb818;
+            }
+        }
+        .btns-green-blue{
+            .btn-green{
+                margin-right:0 !important;
+            }
+        } 
+        
+    }
+}
+.contact-us {
+    background-color: #92c800;
+    z-index: 9;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    p {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    a.btn {
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 1200px) {
+   .realtors-contractors-bg-img { 
+      .realtors-contractors-text {
+         padding: 30px 0px;
+         .heading {
+            padding-bottom: 5px;
+/*            h2 {
+               font-size: 4vw;
+            }*/
+         }
+         .contact-us {
+            margin-top: -5px;
+            p {
+               font-size: 1.7vw;
+               a {
+                  padding: 1vw 3vw;
+               }
+            }
+         }
+         .connect-with-us{
+            padding: 5px 15px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 767px) { 
+   .realtors-contractors-bg-img { 
+      .realtors-contractors-text {
+         .heading {
+            h2 {
+               margin-top: 0;
+               line-height: 37px;
+               font-size: 3.8vw;
+            }
+         }
+         .contact-us {
+            margin-top:40px;
+            p {
+               font-size:2.5vw;
+               a {
+                  padding: 1vw 3vw;
+                  font-size: 2vw;
+               }
+            }
+         }
+         .connect-with-us {
+            a{
+               font-size: 14px;
+               padding: 15px 20px;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 635px) {
+   .realtors-contractors-bg-img { 
+      .realtors-contractors-text {
+         padding:15px 0;
+         .heading {
+            padding-bottom:9px;
+            h2 {
+               line-height: 35px;
+            }
+         }
+         .contact-us {
+            margin-top: 7px;
+            p {
+               font-size: 2.7vw;
+               a {
+                  font-size: 2.1vw;
+               }
+            }
+         }
+         .connect-with-us{
+            a {
+               font-size: 2.6vw; 
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 480px) {
+   .realtors-contractors-bg-img { 
+      .realtors-contractors-text {
+         padding:10px 0;
+         .heading {
+            padding-bottom:0px;
+            h2 {
+               line-height: 25px;
+            }
+         }
+         .contact-us {
+            margin-top:0;
+            p {
+               font-size: 3.5vw;
+               text-align: left;
+               margin-left: 15px;
+               a {
+                  font-size: 2.6vw;  
+                  padding: 1.3vw 3.5vw;
+               }
+            }
+         }
+         .connect-with-us{
+            a {
+               font-size: 2.8vw;
+               padding: 15px 20px;
+            }
+         }
+      }
+   }
+   
+   .recent-listings {       
+    .bs-example.bs-example-tabs{
+         .tab-content{
+                 .image-div {
+                   padding-right: 0;
+                   padding-left: 0;
+                   margin-top:0 !important;
+                        .caption.main_single {
+                         width: 100%;
+                         left: 0;
+                    }
+                }  
+            }   
+        } 
+   }
+  
+}
+@media screen and (max-width: 418px) {
+   .realtors-contractors-bg-img { 
+      .realtors-contractors-text {
+         padding:6px 0;
+         .heading {
+            h2 {
+               line-height: 21px;
+            }
+         }
+         .contact-us {
+            margin-top:-2px;
+         }
+         .connect-with-us{
+            margin-top: -2px;
+            a {
+               font-size: 2.9vw;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 400px) {
+   .realtors-contractors-bg-img {
+      .realtors-contractors-text {
+         padding:10px 0;
+         .heading {
+            h2 {
+               line-height: 24px;
+               font-size: 4.7vw;
+            }
+         }
+         .contact-us {
+            p {
+               font-size: 4vw;
+               a {
+                  font-size: 3.3vw;
+                  padding: 1.5vw 3.8vw;
+               }
+            }
+         }
+         .connect-with-us{
+            a {
+               font-size: 14px;
+               padding: 15px 20px;
+            }
+         }
+      }
+   }
+}
+
+
+/*common-all-containers*/
+@media screen and (max-width: 1200px) {
+   .container{
+      width: 100%;
+   }
+}
+
+/*end*/   
+
+/*rent-home*/
+.owl-carousel {  
+   .owl-item {
+      .properties-for-rent-bg-img { 
+         background-image: url("/storage/site-images/rent.jpg");   
+      }
+   } 
+}
+
+
+/*end*/
+
+/*vacation-home*/
+.owl-carousel {  
+   .owl-item {
+      .properties-for-vacation-bg-img { 
+         background-image: url("/storage/site-images/vacation.jpg");   
+      }
+   } 
+}
+/*ends*/
+
+/*Static CSS start*/
+.owl-carousel .owl-stage-outer {
+	-webkit-transform: translateZ(0)
+}
+.owl-carousel .owl-item,
+.owl-carousel .owl-wrapper {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+}
+.owl-carousel .owl-video-tn{
+	background-position: 50%;
+}
+.explore-our-listings a {
+	border: 1px solid #1ac0ec;
+}
+
+/*Static CSS end*/

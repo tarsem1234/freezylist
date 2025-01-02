@@ -1,0 +1,1018 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.owl-carousel, .owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: none;
+}
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+.owl-carousel .animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.owl-height {
+  -webkit-transition: height .5s ease-in-out;
+  transition: height .5s ease-in-out;
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+}
+
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""] {
+  max-height: 0;
+}
+
+.owl-carousel .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform .1s ease;
+  transition: -webkit-transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+  display: none;
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 10px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.owl-theme .owl-nav .disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+
+/*@import "app";*/
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+.owl-carousel .owl-item {
+  float: left;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img, .owl-carousel .owl-item .properties-for-rent-bg-img, .owl-carousel .owl-item .properties-for-vacation-bg-img {
+  background-image: url("/storage/site-images/sale.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  max-height: 80vh;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img img, .owl-carousel .owl-item .properties-for-rent-bg-img img, .owl-carousel .owl-item .properties-for-vacation-bg-img img {
+  visibility: hidden;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a h1, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a h1, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a h1 {
+  font-family: PlayfairDisplay;
+  color: #ffffff;
+  font-size: 73px;
+  font-weight: 700;
+  line-height: 59px;
+  margin-top: 11px;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-heading {
+  font-size: 66px;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a p, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a p, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a p {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 59px;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a p span, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a p span, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a p span {
+  color: #13b2dc;
+}
+
+.owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a:hover, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a:hover, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a:hover {
+  color: #ece7e7 !important;
+}
+
+.owl-carousel .owl-dots {
+  position: absolute;
+  left: 47%;
+  bottom: 5%;
+}
+
+.textarea-height {
+  min-height: 150px !important;
+}
+
+.image-div .caption.main_single {
+  position: absolute;
+  top: 0;
+  background-color: rgba(128, 172, 210, 0.75);
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+  display: block;
+  left: 15px;
+  width: calc(100% - 30px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  /*padding-top: 7vh;*/
+}
+
+.image-div .caption.main_single .property-details.property-higlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.image-div:hover .caption.main_single {
+  display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.property-higlight a {
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.property-higlight a:hover {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  color: #EDEFF2;
+  text-shadow: 2px 2px 4px #630000;
+}
+
+@media screen and (max-width: 1200px) {
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a h1, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a h1, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a h1 {
+    font-size: 5.9vw;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-heading {
+    font-size: 5vw;
+    line-height: 51px;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a p, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a p, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a p {
+    font-size: 2.9vw;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-para {
+    font-size: 2.5vw;
+    line-height: 33px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-heading {
+    line-height: 40px;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-para {
+    font-size: 2.5vw;
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a h1, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a h1, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a h1 {
+    line-height: 7vw;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-heading {
+    font-size: 5.7vw;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-para {
+    font-size: 2.8vw;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a p, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a p, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a p {
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+  .owl-carousel .owl-dots {
+    left: 45%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-heading, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-heading {
+    font-size: 7vw;
+    line-height: 34px;
+  }
+  .owl-carousel .owl-item .properties-for-sale-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-rent-bg-img .text-heading a .vacation-para, .owl-carousel .owl-item .properties-for-vacation-bg-img .text-heading a .vacation-para {
+    font-size: 3.4vw;
+    line-height: 10px;
+  }
+  .owl-carousel .owl-dots {
+    left: 41%;
+  }
+}
+
+.owner-sol-offers-row .owner-sol-offers {
+  text-align: center;
+}
+
+.owner-sol-offers-row .owner-sol-offers h3 {
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  /*margin-top: 0*/
+}
+
+.owner-sol-offers-row .owner-sol-offers p {
+  color: #727272;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.owner-sol-offers-row .owner-sol-offers .bottom-para {
+  width: 100%;
+}
+
+.owner-sol-offers-row .owner-sol-offers .bottom-para p {
+  text-transform: none;
+  line-height: 24px;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .owner-sol-offers-row .owner-sol-offers .bottom-para {
+    padding: 0 0;
+  }
+  #rent .image-div, #sale .image-div, #Vacation .image-div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 803px) {
+  .owner-sol-offers-row .owner-sol-offers .heading-para h3 {
+    font-size: 3.9vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .owner-sol-offers-row .owner-sol-offers h3 {
+    font-size: 5.5vw;
+  }
+}
+
+.all-icons-row {
+  padding-top: 45px;
+}
+
+.all-icons-row .home-tools-row {
+  text-align: center;
+}
+
+.all-icons-row .home-tools-row .img-div {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.all-icons-row .home-tools-row .img-div img {
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.all-icons-row .home-tools-row .img-div .img-tools {
+  padding-bottom: 22px;
+}
+
+.all-icons-row .home-tools-row .img-div p {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+  margin: 0 0 0;
+}
+
+.all-icons-row .home-tools-row .img-div .btn-read-more {
+  padding: 9px 0;
+  margin-top: 33px;
+}
+
+.all-icons-row .home-tools-row .img-div .btn-read-more a {
+  text-decoration: none;
+  background-color: #27bbe3;
+  color: #fff;
+  padding: 9px 45px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 23px;
+  border-radius: 23px;
+  margin: -8px 0px;
+}
+
+.all-icons-row .home-tools-row .img-div .btn-read-more a:hover {
+  color: #27bbe3;
+  background-color: #fff;
+  border: 1px solid #27bbe3;
+}
+
+@media screen and (max-width: 886px) {
+  .all-icons-row .home-tools-row .img-div p {
+    height: 69px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .all-icons-row {
+    padding: 0 0;
+    margin: 0;
+  }
+  .all-icons-row .home-tools-row .img-div {
+    padding-bottom: 30px;
+  }
+  .all-icons-row .home-tools-row .img-div p {
+    height: auto;
+  }
+  .all-icons-row .home-tools-row .marketplace-div {
+    padding-bottom: 0;
+  }
+  .contact-us.btns-green-blue a.btn {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  .recent-listings {
+    padding-bottom: 30px;
+  }
+  .recent-listings .bs-example.bs-example-tabs ul.nav-tabs a.btn-main {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+  .recent-listings .bs-example.bs-example-tabs .tab-content {
+    padding: 0 30px;
+  }
+  .recent-listings .bs-example.bs-example-tabs .tab-content .image-div {
+    padding-right: 5px;
+    margin-bottom: 10px;
+  }
+  .recent-listings .bs-example.bs-example-tabs .tab-content .image-div:nth-of-type(2n) {
+    /*padding-left: 5px;*/
+    /*padding-right: 15px;*/
+  }
+  .recent-listings .bs-example.bs-example-tabs .tab-content .image-div .caption.main_single {
+    width: calc(100% - 20px);
+  }
+}
+
+.recent-home-icon {
+  clear: both;
+}
+
+.recent-listings {
+  padding-bottom: 45px;
+}
+
+.recent-listings .heading-para {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.recent-listings .heading-para h3 {
+  margin-bottom: 6px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.recent-listings .heading-para p {
+  color: #615f5f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.recent-listings .images-row .nested-div {
+  padding-top: 10px;
+}
+
+.recent-listings .images-row .recent-listings-img img {
+  width: 100%;
+}
+
+.recent-listings .bs-example.bs-example-tabs {
+  float: left;
+  width: 100%;
+}
+
+.recent-listings .bs-example.bs-example-tabs ul.nav-tabs {
+  margin: 30px 0;
+  border-bottom: 0;
+}
+
+.recent-listings .bs-example.bs-example-tabs ul.nav-tabs a.active, .recent-listings .bs-example.bs-example-tabs ul.nav-tabs .btn-main:active, .recent-listings .bs-example.bs-example-tabs ul.nav-tabs .btn-main:focus, .recent-listings .bs-example.bs-example-tabs ul.nav-tabs .btn-main:hover {
+  background-color: #25bbe2;
+  color: #fff;
+  border-color: #25bbe2;
+}
+
+.recent-listings .bs-example.bs-example-tabs ul.nav-tabs .btn-main {
+  background-color: #92c800;
+  color: #fff;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 45px;
+  margin: 5px;
+  line-height: 15px;
+}
+
+.recent-listings .bs-example.bs-example-tabs .image-div .listing-image-div {
+  /*height: 225px;*/
+  /*display: table;*/
+}
+
+.recent-listings .bs-example.bs-example-tabs .image-div img {
+  width: 100%;
+  /*height: 100%;*/
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .recent-listings .images-row {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .recent-listings .images-row .recent-listings-img {
+    padding: 15px 15px 0px;
+  }
+  .recent-listings .images-row .p-bottom-0 {
+    padding-bottom: 0;
+  }
+}
+
+.our_owners_sol:after {
+  bottom: 0;
+}
+
+.our_owners_sol {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.our_owners_sol:before,
+.our_owners_sol:after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  display: block;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.our_owners_sol:before {
+  top: 0;
+}
+
+.explore-our-listings {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.explore-our-listings a {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1ac0ec;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #1ac0ec;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 10px;
+  padding: 15px 53px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.explore-our-listings a:hover {
+  color: #fff;
+  background-color: #1ac0ec;
+}
+
+.realtors-contractors-bg-img {
+  background-image: url(/storage/site-images/black-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin: 0;
+  float: left;
+  width: 100%;
+}
+
+.realtors-contractors-bg-img img {
+  visibility: hidden;
+  height: 1px;
+}
+
+.realtors-contractors-bg-img .realtors-contractors-text {
+  margin: 60px auto;
+  /*background-color: #272727;*/
+  float: none;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.realtors-contractors-bg-img .realtors-contractors-text h2 {
+  margin-top: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.realtors-contractors-bg-img .realtors-contractors-text h2 span {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 8px;
+}
+
+.realtors-contractors-bg-img .realtors-contractors-text h2 .para-green {
+  color: #9cb818;
+}
+
+.realtors-contractors-bg-img .realtors-contractors-text .btns-green-blue .btn-green {
+  margin-right: 0 !important;
+}
+
+.contact-us {
+  background-color: #92c800;
+  z-index: 9;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contact-us p {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.contact-us a.btn {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .realtors-contractors-bg-img .realtors-contractors-text {
+    padding: 30px 0px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading {
+    padding-bottom: 5px;
+    /*            h2 {
+               font-size: 4vw;
+            }*/
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us {
+    margin-top: -5px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p {
+    font-size: 1.7vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p a {
+    padding: 1vw 3vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us {
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .realtors-contractors-bg-img .realtors-contractors-text .heading h2 {
+    margin-top: 0;
+    line-height: 37px;
+    font-size: 3.8vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us {
+    margin-top: 40px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p {
+    font-size: 2.5vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p a {
+    padding: 1vw 3vw;
+    font-size: 2vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us a {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .realtors-contractors-bg-img .realtors-contractors-text {
+    padding: 15px 0;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading {
+    padding-bottom: 9px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading h2 {
+    line-height: 35px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us {
+    margin-top: 7px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p {
+    font-size: 2.7vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p a {
+    font-size: 2.1vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us a {
+    font-size: 2.6vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .realtors-contractors-bg-img .realtors-contractors-text {
+    padding: 10px 0;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading {
+    padding-bottom: 0px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading h2 {
+    line-height: 25px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us {
+    margin-top: 0;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p {
+    font-size: 3.5vw;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p a {
+    font-size: 2.6vw;
+    padding: 1.3vw 3.5vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us a {
+    font-size: 2.8vw;
+    padding: 15px 20px;
+  }
+  .recent-listings .bs-example.bs-example-tabs .tab-content .image-div {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0 !important;
+  }
+  .recent-listings .bs-example.bs-example-tabs .tab-content .image-div .caption.main_single {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .realtors-contractors-bg-img .realtors-contractors-text {
+    padding: 6px 0;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading h2 {
+    line-height: 21px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us {
+    margin-top: -2px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us {
+    margin-top: -2px;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us a {
+    font-size: 2.9vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .realtors-contractors-bg-img .realtors-contractors-text {
+    padding: 10px 0;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .heading h2 {
+    line-height: 24px;
+    font-size: 4.7vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p {
+    font-size: 4vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .contact-us p a {
+    font-size: 3.3vw;
+    padding: 1.5vw 3.8vw;
+  }
+  .realtors-contractors-bg-img .realtors-contractors-text .connect-with-us a {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+}
+
+/*common-all-containers*/
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/*end*/
+/*rent-home*/
+.owl-carousel .owl-item .properties-for-rent-bg-img {
+  background-image: url("/storage/site-images/rent.jpg");
+}
+
+/*end*/
+/*vacation-home*/
+.owl-carousel .owl-item .properties-for-vacation-bg-img {
+  background-image: url("/storage/site-images/vacation.jpg");
+}
+
+/*ends*/
+/*Static CSS start*/
+.owl-carousel .owl-stage-outer {
+  -webkit-transform: translateZ(0);
+}
+
+.owl-carousel .owl-item,
+.owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+}
+
+.owl-carousel .owl-video-tn {
+  background-position: 50%;
+}
+
+.explore-our-listings a {
+  border: 1px solid #1ac0ec;
+}
+
+/*Static CSS end*/

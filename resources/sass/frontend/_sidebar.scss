@@ -1,0 +1,189 @@
+/*sidebar-css*/
+.sidebar {
+    .sidenav{
+        .left-dashboard-div {
+            width: 100%;
+            background: #fff;
+            min-height: 400px;
+            margin: 40px 0px;
+            padding: 30px 30px 0px;
+            .navbar {
+                border: 0px solid transparent  ! important;
+                margin-bottom: 0;
+                .navbar-collapse {
+                    padding-right: 0;
+                    padding-left: 0;
+                    ul {
+                        margin: 0;
+                        padding: 0;  
+                        li {
+                            list-style: none;
+                            margin-bottom: 37px;
+                            width: 100%;
+                            font-size: 13px;
+                            border: 2px solid transparent;
+                            a {
+                                color:#727272;
+                                font-weight:400;
+                                font-size: 13px;
+                                clear: both;
+                                width: 100%;
+                                display: inline-block;
+                                .icons-dashboard {
+                                    margin-right: 10px; 
+                                }
+                            }
+                            a :hover, a :focus, a :active{
+                                border:0px;
+                                outline: 0px !important;
+                                outline-offset: 0px  !important;
+                                text-decoration: none  !important; 
+                            }               
+                        }
+                    }
+                    .dropdown { 
+                        ul{
+                            li {
+                                margin: 10px 0px 0px 0 !important;
+                                padding-left: 20px;
+                            }
+                        } 
+                    }
+                    .div-network, .div-listing, .div-message, .div-document, .div-offer {
+                        height: 22px;
+                        background: #00c292;
+                        float: right;
+                        width: 22px;
+                        text-align: center;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    .div-listing{
+                        background: #03a9f3;
+                    }
+                    .div-message{
+                        background: #fb9678;
+                    }
+                    .div-document{
+                        background: #ffb463;
+                    }
+                    .div-offer{
+                        background: #8bbc07;
+                    } 
+                    .right{
+                        float: right;
+                    }
+                    #dashboard{
+                        font-weight:bold;
+                        color: #000;
+                    } 
+                }
+            }
+            .navbar-default{
+                .collapsed{
+                    .icon-bar {
+                        background-color: #fff;
+                    }
+                } 
+            }
+            .small-div{
+                .div-network, .div-listing, .div-message, .div-document, .div-offer {
+                    height: 19px ! important;
+                    width: 19px ! important; 
+                    font-size: 13px ! important;
+                }
+            }
+
+        }
+        /*responsive*/
+
+        @media screen and (max-width: 767px){
+            .navbar-default {
+                background-color: transparent;
+                border-color: #d3e0e9;
+            }
+            .left-dashboard-div {
+                margin: 0 !important; 
+                padding: 0px;
+                min-height:auto  ! important;
+                background: transparent ! important;
+                .navbar{
+                    .navbar-collapse {
+                        background: #fff;
+                        padding: 15px 15px;
+                        ul li {
+                            list-style: none;
+                            margin-bottom: 30px;
+                        }
+                    } 
+                    .navbar-default {
+                        .navbar-toggle-dashboard { 
+                            margin-right: auto;
+                            margin: 30px 0 20px; 
+                            float: left;
+                            display: block;
+                            background: #03a9f3;
+                            border: none;
+                            .icon-bar { 
+                                background-color: #fff;
+                            } 
+                            .navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle:focus {
+                                background: #03a9f3;
+                                border: 0px;                        
+                            }
+                        } 
+                    }
+                    .navbar-collapse{ 
+                        background: #fff;
+                        border: 0px;
+                        padding:15px;
+                        margin-bottom: 20px;
+                        li {
+                            margin-bottom: 20px;
+                            a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }         
+        }
+    } 
+}
+    @media screen and (max-width: 991px){ 
+        .sidebar {
+            .sidenav{
+                padding-right: 0;
+
+            }
+        }
+    } 
+    @media screen and (max-width: 768px){  
+        .sidebar {
+            .sidenav{
+                padding-right:15px;
+            }
+        
+    
+    
+    .navbar-default {
+        .navbar-toggle-dashboard { 
+            margin-right: auto;
+            margin: 30px 0 20px; 
+            float: left;
+            display: block;
+            background: #03a9f3;
+            border: none;
+            .icon-bar { 
+                background-color: #fff;
+            }
+            .navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle:focus {
+                background: #03a9f3;
+                border: 0px;                        
+            } 
+        }
+    } 
+    }
+    }  

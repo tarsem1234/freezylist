@@ -1,0 +1,62 @@
+@import "contract_tools.scss";
+.register-page{
+    .panel {
+        margin-bottom: 0;
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        box-shadow: none;  
+    }
+    .form-group {
+        .signature {
+            margin-bottom: 20px;
+            .signature-button{
+                background: #92c800;
+                border:1px solid #92c800;
+                color: #FFF;
+                padding: 6px 15px;
+                border-radius: 5px;
+                font-size: 15px;
+            }
+            .signature-model{
+                padding: 25px;
+            }
+        }
+        .checkbox {
+            .styled-checkbox + label {
+                margin-bottom: 0px  ! important;
+                margin-top: 0px  ! important;
+            }
+        }
+        .text-height { 
+            min-height: 120px ! important;
+        }
+        .pull-right-div {
+            float: right ! important;
+            margin-left: 50px ! important;                                  
+            .checkbox {
+                .styled-checkbox + label {
+                    color:#ccc ! important;                      
+                }
+            }
+        }
+    }   
+}
+.congrats-contact-tool {
+    .congrats-para {
+        margin-top: 20px;
+    }
+}
+.dis-que{  
+    .checkbox .styled-checkbox + label { 
+        margin-right: 10px !important;
+        margin-bottom: 10px;
+    } 
+}  
+.dis-que .table-bordered{  
+    min-width: 530px; 
+}
+.buyer-sign-error {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}

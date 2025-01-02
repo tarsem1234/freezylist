@@ -1,0 +1,104 @@
+@import "login.scss";
+
+/***************************   document-portal  ****************************/
+.document-portal{
+    margin: 20px 0px 20px;
+    display: inline-block;
+    width: 100%;
+    .center, h2 {
+        text-align: center;
+        padding-bottom: 23px;
+        color: #424242;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 23px;
+        padding-bottom: 10px;
+        background: #fff;
+        border: 0px solid #f0f0f0;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+    .btn-search {
+        background: #92c800;
+        border: #92c800;
+        color: #FFF;
+        padding: 0 15px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .fa-download {
+        display: inline-block;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+    .downloadbtn {
+        display: inline-block;
+        background: inherit;
+        padding: 0;
+        line-height: 28px;
+    }
+    @media screen and (max-width: 480px) { 
+        .col-xs-6 {
+            width: 100%;
+        }
+    }
+} 
+#profile-pic-box{
+    margin-bottom: 40px;
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin: 0px auto;
+    }
+}
+
+
+/*userCreate and businessCreate pages css starts here*/
+.form-group textarea {
+    resize: none;
+}
+.form-group [type="radio"]:checked + label, .form-group [type="radio"]:not(:checked) + label {
+    margin-bottom: 15px;
+    margin-right: 10px;
+    padding-left: 23px;
+}
+.form-group .checkbox .styled-checkbox + label {
+    float: left;
+    margin-right: 15px;
+}
+div#services-selection {
+    padding: 0 !important;
+}
+form .form-group .select2-container {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+#services-selection li.select2-selection__choice {
+    background-color: transparent;
+    margin-top: 3px;
+}
+.select2-container.select2-container--open .select2-dropdown--below {
+    border-top: 1px solid #aaa;
+}
+form .form-group .select2-container.select2-container--open .select2-selection {
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+form .form-group #services-selection .select2-container{
+    margin-bottom: 0;
+}
+form .form-group #services-selection .select2-container .select2-selection {
+    border-color: #aaa;
+}
+
+/*userCreate and businessCreate pages css ends here*/
+
+/*Static CSS Start*/
+.login-page .panel .text-bottom {
+	margin: 10px 20px 20px
+}
+/*Static CSS End*/
+ 

@@ -1,0 +1,39 @@
+@import "dashboard.scss";
+@import "profile-edit.scss";
+.make-an-offer{   
+    textarea#document-title-input {
+        min-height: 150px ! important;
+    }
+    .panel {
+        border: 0  !important;
+        padding: 0  !important;
+    }
+    .select__arrow {
+        top: 20px !important;
+    }
+    .dashboard-page label {
+        text-transform: lowercase !important;
+        color: #727272 !important;
+    }
+    .offer-text{
+        color: #222222;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        margin-bottom: 10px;
+    }
+}
+
+/*Static CSS Start*/
+@media screen and (max-width: 1200px) {
+	.detail-page-width {
+		max-width: 1170px;
+	}
+}
+
+.register-page .text-bottom {
+	margin: 10px 20px 20px
+}
+/*Static CSS End*/

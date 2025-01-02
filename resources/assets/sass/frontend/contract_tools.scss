@@ -1,0 +1,340 @@
+
+/*seller-sale-pages*/
+/*thank_you_to_seller_for_answer,seller-property-condition-disclosure,post-closing-occupancy-agreement-review*/
+.questionnairer-results,.seller-property-condition-disclosure,.post-closing-occupancy-agreement-review {
+    .nested-div {
+        .para-text {
+            .last-child {
+                font-weight: 600;
+                margin-bottom: 0;
+                span {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}   
+
+/*end*/
+
+/*thank_you_to_seller_for_answer*/
+.questionnairer-results {
+    .nested-div {
+        .btns-green-blue {
+            margin-bottom: 20px;
+            text-align: center;
+            padding-top: 0;
+        }
+    }
+}   
+
+/*end*/
+
+/*seller-property-condition-disclosure*/
+.seller-property-condition-disclosure {
+    .nested-div {
+        .para-text {
+            ul {
+                list-style-image: url("/storage/site-images/tick.png");
+                padding-bottom: 30px;
+            }
+            .last-child {
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}
+/*end*/ 
+
+
+.contract-tools-seller-common .nested-div .add_Signer_tenant .btns-green-blue {
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 0;
+    display: inline-block;
+    float:right !important;
+    margin-left: 15px;
+    /* float: right !important; */
+    /* margin-top: -42px; */
+   // float: left;
+}
+.add_Signer_tenant .add-signers {
+    margin-top: 80px;
+}
+.add_Signer_tenant #select-email-error{
+    margin-bottom: 0 !important;
+}
+
+
+/*purchase-sale-agreement-review-text */
+.purchase-sale-agreement-review,.ownership-interest-additional-required-signers  {
+    .nested-div {
+        .heading-text {
+            h2 {
+                line-height: 30px;
+            }
+        }
+        .para-text {
+            ul {
+                list-style-image: url("/storage/site-images/tick.png");
+                .img-hand {
+                    list-style-image: url("/storage/site-images/hand.png");
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}
+/*end*/
+/*purchase-sale-agreement-review*/
+.purchase-sale-agreement-review  {
+    .seller-que-signer-form {
+        margin-bottom: 0;
+    }
+    .ownership-interest-additional-required-signers {
+        .nested-div {
+            padding:0 0; 
+            margin:0 0;
+            .para-text {
+                .radio-btns {
+                    padding-bottom: 40px;
+                    color: #222222;
+                    font-size: 15px;
+                    font-weight: 400;
+                    radio {
+                        margin-right: 5px;
+                    }
+                    .label-yes { 
+                        padding: 0 20px;
+                        margin-right: 10px !important;
+                    }
+                    #yes-radio-btn,#no-radio-btn {
+                        position: absolute !important;
+                        left:-9999px  !important;
+                    }
+                }  
+            }
+            .select-box-div {
+                select {
+                    /*padding:45px 0;*/
+                    border: 1px solid #f0f0f0;
+                    text-transform: lowercase !important;
+                    box-shadow: none;
+                    font-weight: 400;
+                    font-size: 12px;
+                    padding: 8px 15px;
+                    color: #222222 !important;
+                    opacity: 1;
+                    height: 120px;
+                    width: 100% !important; 
+                }
+                select:focus,select:active {
+                    border-color: #98cbe8;
+                    outline: 0;
+                }
+                .btns-green-blue {
+                    padding-top: 35px;
+                    text-align: left !important;
+                    .btn-green {
+                    }
+                } 
+            }
+            .btns-green-blue {
+                padding-top:0;
+                .btn-blue {
+                    margin-right: 0;
+                    float: right!important;
+                    margin-top: -42px;
+                }
+            } 
+        } 
+    }
+    .add-signers {
+        .add-signers-form {
+            margin-top: 30px;
+            border-radius: 4px;
+            box-shadow: none;
+            border: 8px solid #f0f0f0;
+            color: black;
+            .panel {
+                padding: 25px;
+                margin-top: 0 !important;
+                border: 0;
+                margin-bottom: 0;
+                background-color: #f8f7f7;
+                .panel-heading {
+                    padding: 0 !important;
+                    color: #25bbe2;
+                    text-align: center;
+                    font-size: 32px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    background: transparent;
+                    border: none;
+                    .black-text {
+                        color: #000000;
+                    }
+                }
+            }
+            .signer-buttons {
+                text-align: center;
+                padding-bottom:10px;
+                .btn-reset {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+} 
+/*end*/
+
+/*common-some-pages*/
+.dis-que{  
+    .checkbox .styled-checkbox + label { 
+        margin-right: 10px !important;
+        margin-bottom: 0px;
+        min-height: 26px;  
+    }
+    .lowercase {
+        h4 {
+            span {
+                text-transform: lowercase;
+            }
+        }
+    } 
+    .form-group{
+        [type="radio"]:not(:checked) + label,[type="radio"]:checked + label{
+            margin-bottom: 20px !important;
+            padding: 0 20px ! important;
+            vertical-align: middle;
+            font-size: 15px;
+            line-height: 18px;
+        }
+        .text-height { 
+            min-height: 120px ! important;
+        }
+    }
+    .table-bordered {
+        overflow-x: scroll;
+        z-index: -99;
+        tbody {  
+            tr {
+                th{
+                    .width{
+                        max-width: 30px;
+                        text-align: center !important;   
+                    } 
+                }
+                td {
+                    border: 1px solid #f6f6f6  !important;  
+                    text-align: left  !important;  
+                    font-size: 15px; 
+                    color: #222222; 
+                    font-weight: 400;
+                }
+                label {
+                    float: left;
+                    display: block; 
+                    margin-bottom: 0 !important;
+                }
+                input{
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+
+    }  
+    .table {
+        thead {
+            &:first-child {
+                tr {
+                    &:first-child {
+                        th {
+                            border-top: 0;
+                            border-bottom: 0;
+                            border-color: #f6f6f6;
+                            font-weight: 600;
+                            color: #222222;
+                            text-align: center;
+                        }
+                        td {
+                            border-top: 0;
+                            border-bottom: 0;
+                            border-color: #f6f6f6;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+th{
+    .width{
+        max-width: 30px;
+        text-align: center !important;   
+    } 
+}
+/*end*/
+/*end*/ 
+
+/*seller-sale-rent-common-pages*/
+/*#add-signer-step2 {
+   .error-validations {
+      label {
+         padding: 0 !important;
+         font-size: 14px !important;
+         margin-top: 0 !important;
+         margin-bottom: 20px !important;
+      }
+   }
+}*/
+/*end*/
+
+.dis-que .table-bordered{ 
+    min-width: 530px;     
+}
+.register-page{
+    .panel {
+        margin-bottom: 0;
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        box-shadow: none;  
+    }
+    .form-group {
+        .signature {
+            margin-bottom: 20px;
+            .signature-button{
+                background: #92c800;
+                border:1px solid #92c800;
+                color: #FFF;
+                padding: 6px 15px;
+                border-radius: 5px;
+                font-size: 15px;
+            }
+            .signature-model{
+                padding: 25px;
+            }
+        }
+        .checkbox {
+            .styled-checkbox + label {
+                margin-bottom: 0px  ! important;
+                margin-top: 0px  ! important; 
+            }
+        }
+        .text-height { 
+            min-height: 120px ! important;
+        }
+        .pull-right-div {
+            float: right ! important;
+            margin-left: 50px ! important;                                  
+            .checkbox {
+                .styled-checkbox + label {
+                    color:#ccc ! important;                      
+                }
+            }
+        }
+    }   
+}   

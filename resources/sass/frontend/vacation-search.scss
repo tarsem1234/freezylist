@@ -1,0 +1,275 @@
+@import "contact";
+@import "dashboard";
+@import "sale-rent-search";
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h3 {
+    color: #fff; 
+}
+.filter-image {
+    display: none;
+}
+.map-view {
+    display:none;
+    .house-images-row {
+        .nested-divs {
+            .images {
+            }
+        }
+    }
+}
+.form-search-property {
+    .nested-div {
+        .formItem {
+            /*height: 62px;*/
+        }
+    }
+}
+#international-search {
+    margin-top: -22px;
+}
+.img-slider-row {
+    .right-div-data {
+        .additional-features-row {
+            .prop-name-price {
+                float:left;  
+                h3 {
+                    float:left !important;
+                    color: #fff ! important;
+                }
+            } 
+            .negotiable {
+                float: right !important;
+                color: #fff ! important;
+            }
+        }
+    }
+}
+#search-per-page {
+    #search-limit {
+        select {
+            /*width: 100%;*/
+        }
+    }
+}
+
+@media screen and (min-width: 1580px) {
+    #international-search {
+        margin-top: 0px !important;
+    }
+}
+@media screen and (max-width: 1052px) {
+    #international-search, #region-country {
+        margin-top: -22px;
+    }
+}
+@media screen and (max-width: 991px) {
+    #international-search, #region-country {
+        margin-top: 0;
+    }
+}
+/*@media screen and (max-width: 799px) {
+    #region-country {
+        margin-top: -22px;
+    }
+}*/
+@media screen and (max-width: 768px) {
+    .nested-div {
+        .formItem {
+            label {
+                font-size: 13px;
+            }
+        }
+    }
+    #less-more {
+       /*margin: 10px 0;*/
+    }
+}
+@media screen and (max-width: 479px) {
+    .img-slider-row {
+        .right-div-data {
+            .additional-features-row {
+                margin: 0 auto 15px auto;
+                width: 100%;
+                .prop-name-price {
+                    width: 100%;
+                }
+                .negotiable {
+                    float: left !important;
+                }
+            }
+        }
+    }
+}
+.map-view{
+    p {
+        margin-bottom: 0px;
+        padding-bottom: 3px;
+    }
+} 
+.list-view {
+    display:none;
+    .properties-for-rent-row {
+        .container {
+            .row {
+                .left-div {
+                    .left-div-row {
+                        .image-div {
+                            img {
+                                height: 270px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.no-padding {
+    padding: 0  !important;
+}
+.table {
+    >tbody {
+        >tr {
+            >td {
+                border-top: 0px solid #ddd !important;
+            }
+        }
+    }
+}
+.map-view {
+    .house-images-row {
+        .first-img-row {
+            margin-top: 20px !important;
+        }
+        .nested-divs {
+            .images {
+                .img-bottom-div {
+                    table {
+                        .nested-all-divs {
+                            p {
+                                line-height: 15px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.vacation-rental {
+    .text-color{
+        padding: 5px 10px !important;
+        background: green !important;
+        border-radius: 20px !important;
+        margin-left: 11px !important;
+        font-size: 16px !important;
+    }
+}
+.right-text { 
+    float: right;
+}
+.overview-schools-photos .general-information-li {
+    position: relative;
+    z-index: 8;
+}
+@media screen and (max-width: 1300px) { 
+    .img-slider-row {
+        .all-buttons {
+            .particular-btn {
+                width: 48% ! important;
+                margin: 1%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .search-property-row .nested-div .bg-white .form-search-property .nested-div .formItem {z-index: 99;}
+    .table-responsive {
+        border: 0px solid #ddd  ! important;
+    }
+    .img-slider-row, .bg-white-border{
+        margin: 15px 0px ! important;
+    }
+    .all-details-div {
+        .price-property-info-tabs {
+            .price-heading {
+                .btns-price-row {
+                    float: right ! important;
+                    padding-bottom:10px  ! important;
+                }
+            }
+        }
+    }
+    .btn-back {
+        padding: 0;
+        float: left;
+    }
+    .list-view {
+        .properties-for-rent-row {
+            .container {
+                .row {
+                    .left-div {
+                        .left-div-row {
+                            .text-div {
+                                .rent-list-price {
+                                    padding: 0;
+                                    display: inline-block;
+                                    float: none;
+                                    width: 100%;
+                                    .rent {
+                                        width: 50%;
+                                        float: left;
+                                    }
+                                    .list-price {
+                                        width: 50%;
+                                        float: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .vacation-rental{
+        #property-options {
+            .formItem#property-options {
+                padding: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .first-img-row{
+        .col-sm-6{
+            width: 100%  ! important;
+            max-width: 430px  ! important;
+            margin: 20px auto  ! important;
+            display: block  ! important;
+            text-align: center;
+            float: none;
+        }
+    }
+
+}
+
+
+form .select2-container .select2-selection{
+    min-width: 0 !important;
+}
+
+/*Static CSS Start*/
+.register-page .register-banner {
+	background-position: 100%;
+}
+.register-page .text-bottom {
+	margin: 10px 20px 20px;
+}
+.login-page .panel .text-bottom {
+	margin: 10px 20px 20px
+}
+/*Static CSS End*/

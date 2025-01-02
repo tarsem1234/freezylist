@@ -1,0 +1,95 @@
+@import "contact.scss";
+@import "forum.scss";
+.blog-bg{
+    background: #f6f6f6 ! important;  
+}
+/*--------------------------blog-page--------------------------*/
+.blog-page{  
+    .contact-banner {
+        margin-bottom: 80px;
+    }
+    .blog-box {
+        background: #fff;
+        margin-bottom: 30px;
+        .blog-pic {
+            padding: 1px;
+            img {
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .blog-text{
+        text-align: left;
+        padding:0px 20px 20px; 
+        min-height: 185px;
+        h4 {
+            font-size: 12px;
+            margin-top: 20px;       
+            font-weight:700 !important;
+            color: #727272;
+        }
+        h5 {
+            font-size: 22px;
+            margin-top: 20px;
+            font-weight:800 !important;
+            color: #000;
+        } 
+        h6 {
+            font-size: 14px;
+            margin-top: 25px;
+            font-weight:400 !important;
+            color: #25bbe2;
+        }
+        p {
+            max-height: 45px;
+            min-height: 45px;
+        }
+    }   
+    #blog-pagination{
+        text-align: center;
+        ul li a{
+            cursor: pointer !important;
+        }
+    }
+
+    /*--------------------------Responsive-css--------------------------*/
+    @media screen and (max-width: 767px){
+        .contact-banner {
+            margin-bottom: 20px;
+        } 
+        .blog-box{
+            margin-bottom: 20px;
+            .blog-pic img {
+                height: 100% ! important;  
+            }
+        }
+        .blog-text { 
+            padding: 10px; 
+            height: auto;
+            min-height: inherit;
+            max-height: inherit;
+            h6 {
+                margin: 0;
+            }
+            p { 
+                margin-top: 0;
+                max-height: inherit;
+                min-height: inherit;
+            }
+            h5 {
+                margin-top: 10px;
+            }
+            h4 {
+                margin: 10px 0px;
+            }
+        }
+        .pagination {
+            margin-bottom: 20px;
+        }
+    } 
+}  
+
+
+

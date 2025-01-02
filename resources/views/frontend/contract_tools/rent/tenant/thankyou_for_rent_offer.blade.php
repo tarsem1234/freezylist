@@ -1,0 +1,1 @@
+thankyou_for_rent_offer
