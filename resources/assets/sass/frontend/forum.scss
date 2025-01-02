@@ -1,0 +1,406 @@
+@import "contact.scss";
+@import "register.scss";
+@import "banner.scss";
+.forum-page {
+    .pagination  .disabled  span, .pagination  .disabled  span:hover{
+        color: #f0f0f0;
+        background-color:transparent;
+    }
+    .input-btn {
+        float: right;
+        background: transparent;
+        color: #25bbe2;
+        border: 1px solid #25bbe2;
+        margin: 0px;
+        border-radius: 20px;
+        padding: 8px 27px;
+    }
+    .input-btn:hover, .input-btn:active, .input-btn:focus {
+        background: #25bbe2;
+        color: #fff;
+        border: 1px solid #25bbe2;  
+    }
+    h5 {
+        text-align: center;
+        color: #222222;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 50px;
+        text-align: center;
+        font-weight: 400 !important;
+        min-height: 10px !important;
+        margin-top: 5px;
+        color: #222222;
+    } 
+    .table {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border-bottom: 0px solid #ddd;
+        text-align: center;
+        width:100%;
+        tbody {
+            th{        
+                tr {                    
+                    td {
+                        padding: 11px  !important;
+                        border-top: 0px solid #ddd  !important;
+                        text-align: center  !important;
+                        font-weight: 600  !important;
+                    }
+                    td.active {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }  
+        thead {
+            &:first-child {
+                tr {
+                    &:first-child {
+                        th { 
+                            padding: 15px;
+                            border-top: 0px solid #fff;
+                            font-weight: 600;
+                            border: none; 
+                            text-align: center;
+                            background: #25bbe2; 
+                        }
+                        td { 
+                            padding: 15px  !important;
+                            border-top: 0px solid #fff !important;
+                            font-weight: 600  !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    thead {
+        background: #25bbe2;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .blue-text {
+        color: #25bbe2;
+    }
+    .table-striped {
+        tbody {
+            tr {
+                &:nth-of-type(odd) {
+                    background-color: #fff;
+                }
+                &:nth-of-type(even) {
+                    background-color: #ececec;
+                }
+            }
+        }
+    }
+    
+    .icon-one, .icon-two, .icon-three{
+        background-image: url(/storage/site-images/icon-1.png);
+        background-repeat: no-repeat;
+        margin-bottom: 25px;
+        background-position: center center;
+        z-index: 99999;
+        height: 88px;
+        margin-top: 50px;
+    }
+    .icon-two{
+        background-image: url(/storage/site-images/icon-2.png);
+    }
+    .icon-three{
+        background-image: url(/storage/site-images/icon-3.png);
+    }
+    
+    
+    
+    
+    .black-div {
+        background: #000;
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        .blue-div{ background: #25bbe2;
+                   width: 230px;
+                   height: 100%;
+                   text-align: center;
+                   color: #fff;
+                   padding: 8px 15px;
+                   font-size: 16px;
+                   font-weight: bold;
+                   margin: 0px auto;
+                   position: relative;
+                   padding-right: 0px;
+        }
+        .blue-div {
+            &:after {
+                position: absolute;
+                content: "";
+                width: 35px;
+                height: 100%;
+                background: #25bbe2;
+                -webkit-transform: skew(30deg);
+                transform: skew(148deg);
+                top: 0;
+                right: -22px;
+            }
+        }
+        .table {
+            thead {
+                tr {
+                    th {
+                        border-bottom: 0px solid #ddd;
+                    }
+                }
+            }
+        }
+    }
+    .table-responsive {
+        overflow-x: hidden; 
+        width: 100%; 
+        float: left;
+    }
+    #forum-pagination {
+        .pagination {
+            li {
+                a{
+                    cursor: pointer !important;
+                }
+            }
+        }
+    }
+}
+.table > tbody > tr > td{
+    padding: 11px  !important;
+    border-top: 0px solid #ddd  !important;
+    text-align: center  !important;
+    color: #727272;
+    font-weight: 600; 
+}
+.network-search-div {
+    ul.pagination {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+        li {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
+.no-network-search {
+    padding-bottom: 30px;
+}
+/*--------------------------Responsive-css--------------------------*/
+@media screen and (max-width: 767px){
+    .forum-page {
+        .black-div {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .input-btn {
+            float: none;
+            margin: 0px auto; 
+            margin-bottom: 0px;
+        }
+        .pagination {
+            margin-bottom: 25px; 
+            margin-top: 0px;
+        }
+        .table-responsive {
+            overflow-x: scroll !important;
+            z-index: -99 !important;
+        }
+        p {
+            margin-top: 0;
+        }
+        .table-responsive {
+            margin-bottom: 10px;
+            border: 0px solid #ddd;
+        }
+    }
+    .blog-single-page{
+        .contact-banner {
+            margin-bottom: 20px;
+        }
+        .blog-text {
+            padding: 20px 0px 20px;
+        }
+        .member-button, .click-button {
+            margin: 20px auto;
+            margin-bottom: 20px auto;
+            font-size: 18px;
+            padding:10px;
+
+            .text{
+                font-size: 18px;
+            }
+        }
+        .member-button {
+            margin: 20px auto;
+        }
+    } 
+    
+    .network-portal {    
+    .form-list {
+        .formField {
+         margin-bottom: 15px;
+   }
+   }
+   }
+}
+@media screen and (max-width: 480px){
+    .forum-page {
+        .pagination {
+            ul { 
+                left: 28%; 
+            }          
+        }
+    }
+}
+/*--------------------------comment-page--------------------------*/
+.comment-page{
+    .panel{
+        margin: 100px 0px;
+        background-color: #fff;
+        border: 8px solid #f0f0f0;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: none;
+        padding: 25px;
+        background: #FFFF;
+        width: 100%;
+        display: inline-block !important;  
+    }
+    .form-control {
+        resize: none;
+    }
+    .user-div {
+        h1 {
+            font-size: 22px;
+            color: #25bbe2; ;
+            font-weight: 600; 
+            text-transform: capitalize;
+            margin-top: 0px;
+        }  
+        p {
+            color: #222;
+            font-weight: 400 ;
+            text-transform: capitalize;
+            font-size: 14px;
+            margin-bottom: 10px;
+            word-wrap: break-word; 
+        }
+        h5{
+            text-transform: uppercase;
+            color: #92c800;
+            margin: 0;
+            font-size: 12px;
+            float: left;
+            font-weight: 600;
+        }
+    }
+    .panel-body {
+        padding-bottom: 0px;
+    }
+    .comment_time {
+        font-weight: 600;
+        float: left;
+        line-height: 13px;
+        font-size: 12px;
+        border-left: 1px solid #727272;
+        padding-left: 10px;
+        margin-left: 10px;
+        color: #727272;
+        text-transform: uppercase;
+    } 
+    .reply-text {
+        color: #424242;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        margin: 0px 0px 30px;
+        width: 100%;
+        float: left;
+        margin-top: 40px;
+    }
+    .comment {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 1.8rem 0;
+        padding-left: 11%;
+    }
+    .panel-heading {
+        color: #25bbe2;
+        background-color: transparent;
+        border-color: transparent;
+        text-align: center;
+        font-size: 32px;
+        clear: both;
+        border: none ;
+        margin-top: 150px;
+        border-top: 12px solid #f0f0f0 ! important;
+        border-radius: 92px;
+        padding-top: 20px;
+    }
+    .comment_info {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        h4 {
+            text-transform: uppercase;
+            color: #92c800;
+            margin: 0;
+            font-size: 12px;
+            float: left;
+            font-weight: 600;
+        }   
+    }
+    #reply-comment-area {
+        min-height: 150px ! important;
+    }
+    .comment_content {
+        border-left: 1px solid #f0f0f0 ;
+        float: left;
+        position: relative;
+        z-index: 9999999999;
+        padding-left: 20px;
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 767px) { 
+        .panel {
+            padding: 15px ! important; 
+            margin: 30px 0px;
+        }
+        .panel-heading {
+            margin-top: 100px;
+        } 
+    }
+    @media screen and (max-width: 480px) {             
+        .comment_content {
+            padding-left: 5px;
+        }
+    }
+}
+@media screen and (max-width: 767px) { 
+    .form-field-input {
+        margin: 30px 0px;
+        padding-bottom: 50px;
+    }
+    .user-div {
+        h1 {
+            font-size: 18px;
+        }  
+    }
+
+}

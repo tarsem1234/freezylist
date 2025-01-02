@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 # src_dir: src
 coverage_clover: coverage.clover
+=======
+# src_dir: src
+coverage_clover: coverage.clover
+>>>>>>> 7f2bd891cfae584fb85712ed872d066558df18ee
 json_path: coveralls-upload.json
