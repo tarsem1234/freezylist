@@ -6,7 +6,12 @@ use Illuminate\Support\Facades\Schedule;
 
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote')->hourly();
+})->purpose('Display an inspiring quote');
+
+// Schedule::command('inspire')
+//          ->hourly();
+Schedule::call('\App\Http\Controllers\Frontend\CronController@checkBackToMarket')->daily();
+
 
 // Schedule::command('inspire')
 //          ->hourly();
