@@ -17,10 +17,6 @@ return [
     'alpha_dash' => 'The :attribute may only contain letters, numbers, and dashes.',
     'alpha_num' => 'The :attribute may only contain letters and numbers.',
 
-    'between' => [
-
-    ],
-
     'max' => [
         'numeric' => 'The :attribute may not be greater than :max.',
         'file' => 'The :attribute may not be greater than :max kilobytes.',
@@ -28,15 +24,7 @@ return [
         'array' => 'The :attribute may not have more than :max items.',
     ],
 
-    'min' => [
-
-    ],
-
     'required_with_all' => 'The :attribute field is required when :values is present.',
-
-    'size' => [
-
-    ],
 
     'timezone' => 'The :attribute must be a valid zone.',
 
