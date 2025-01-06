@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\Access\User\User;
-
 return [
 
     'guards' => [

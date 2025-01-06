@@ -12,7 +12,6 @@ Artisan::command('inspire', function () {
 //          ->hourly();
 Schedule::call('\App\Http\Controllers\Frontend\CronController@checkBackToMarket')->daily();
 
-
 // Schedule::command('inspire')
 //          ->hourly();
 Schedule::call('\App\Http\Controllers\Frontend\CronController@checkBackToMarket')->daily();
