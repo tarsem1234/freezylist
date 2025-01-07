@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\StoreForumRequest;
 use App\Http\Requests\Frontend\UpdateForumRequest;
@@ -94,7 +95,7 @@ class ForumController extends Controller
     public function forumRepliesShow($id)
     {
         if ($id) {
-            $ip = \Request::ip();
+            $ip = Request::ip();
             $forum = Forum::where('id', $id)->with(['forumViews' => function ($query) use ($ip) {
                 $query->where('ip', $ip);
             }, 'replies' => function ($query1) {
