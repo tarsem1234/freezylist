@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Frontend\ConversationMessageRequest;
 use App\Mail\Frontend\SendMessageToSeller;
 use App\Models\Access\User\User;
 use App\Models\Message;
@@ -65,58 +64,59 @@ class MessageController extends Controller
     public function conversation(Request $request, $id)
     {
         $id = decrypt($id);
-        if(User::where('id', $id)->withTrashed()->exists()) {
+        if (User::where('id', $id)->withTrashed()->exists()) {
             $fromUser = User::withTrashed()->find($id);
             if ($request->isMethod('post')) {
                 if ($request->isMethod('post')) {
-                $this->validate($request, [
-            'message' => 'required',
-        ]);
-                $message             = new Message;
-                $message->user_id    = Auth::id();
-                $message->to_user_id = $id;
-                $message->message    = $request->get('message', '');
-                $toUserData = User::where('id', $id)->with(['user_profile', 'business_profile'])->first();  
-                if($message->save()) {
-                    $to = $toUserData->email;
-                    $emailSubject = "Freezylist :  You have received a new message.";
-                    $userName = getFullName($toUserData );
-                    $sender = getFullName(Auth::user());
-                    $conversationLInk = route('frontend.messages.conversation', encrypt(Auth::id()));
-                    $emailBody = "Hi " . $userName . "You have received a new message from " . $sender . ' ' . $request->message . "For replying to this message please go to Your Frezylist Inbox or click on following link. " . $conversationLInk;
-                    $view = "frontend.messages.sendMessageToSellerMail";
-            
-                    Mail::send(new SendMessageToSeller($to, $userName, $sender, $emailSubject, $emailBody, $view, $conversationLInk, $request->message));
-            
-                    // $saveLog = new EmailLogService();
-                    // $saveLog->saveLog($property->id, Auth::id(), $property->user_id, $emailSubject, $emailBody, config('constant.property_type.' . $property->property_type), url()->previous());
+                    $this->validate($request, [
+                        'message' => 'required',
+                    ]);
+                    $message = new Message;
+                    $message->user_id = Auth::id();
+                    $message->to_user_id = $id;
+                    $message->message = $request->get('message', '');
+                    $toUserData = User::where('id', $id)->with(['user_profile', 'business_profile'])->first();
+                    if ($message->save()) {
+                        $to = $toUserData->email;
+                        $emailSubject = 'Freezylist :  You have received a new message.';
+                        $userName = getFullName($toUserData);
+                        $sender = getFullName(Auth::user());
+                        $conversationLInk = route('frontend.messages.conversation', encrypt(Auth::id()));
+                        $emailBody = 'Hi '.$userName.'You have received a new message from '.$sender.' '.$request->message.'For replying to this message please go to Your Frezylist Inbox or click on following link. '.$conversationLInk;
+                        $view = 'frontend.messages.sendMessageToSellerMail';
+
+                        Mail::send(new SendMessageToSeller($to, $userName, $sender, $emailSubject, $emailBody, $view, $conversationLInk, $request->message));
+
+                        // $saveLog = new EmailLogService();
+                        // $saveLog->saveLog($property->id, Auth::id(), $property->user_id, $emailSubject, $emailBody, config('constant.property_type.' . $property->property_type), url()->previous());
                     }
-                return redirect()->back()->withFlashSuccess("Message has been sent");
+
+                    return redirect()->back()->withFlashSuccess('Message has been sent');
+                }
             }
-            }
-            $messages = Message::where(function ($query) use($id) {
+            $messages = Message::where(function ($query) use ($id) {
                 $query->where('user_id', $id)->where('to_user_id', Auth::id());
-            })->orWhere(function ($query) use($id) {
+            })->orWhere(function ($query) use ($id) {
                 $query->where('user_id', Auth::id())->where('to_user_id', $id);
-            })->with(['fromUser'=>function($query){
+            })->with(['fromUser' => function ($query) {
                 $query->withTrashed();
             }])->orderBy('created_at')->get();
 
-            $network = Network::where(function ($query) use($id){
+            $network = Network::where(function ($query) use ($id) {
                 $query->where('from_user_id', $id)->where('to_user_id', Auth::id());
                 $query->orWhere('from_user_id', Auth::id())->where('to_user_id', $id);
             })->withTrashed()->latest()->first();
-            
-            
-  
+
             foreach ($messages as $message) {
                 if ($message->user_id != auth()->id()) {
                     $message->status = 1;
                     $message->save();
                 }
             }
-            return view('frontend.messages.conversation', compact('messages', 'fromUser','network'));
+
+            return view('frontend.messages.conversation', compact('messages', 'fromUser', 'network'));
         }
+
         return redirect()->back()->withFlashDanger('User is not in your network anymore');
     }
 
@@ -171,20 +171,20 @@ class MessageController extends Controller
             $message->to_user_id = $request->get('id');
             $message->message = $request->get('message', '');
             $toUserData = User::where('id', $request->get('id'))->with(['user_profile', 'business_profile'])->first();
-            if($message->save()) {
+            if ($message->save()) {
                 $to = $toUserData->email;
-                $emailSubject = "Freezylist :  You have received a new message.";
-                $userName = getFullName($toUserData );
+                $emailSubject = 'Freezylist :  You have received a new message.';
+                $userName = getFullName($toUserData);
                 $sender = getFullName(Auth::user());
                 $conversationLInk = route('frontend.messages.conversation', encrypt(Auth::id()));
-                $emailBody = "Hi " . $userName . "You have received a new message from " . $sender . ' ' . $request->message . "For replying to this message please go to Your Frezylist Inbox or click on following link. " . $conversationLInk;
-                $view = "frontend.messages.sendMessageToSellerMail";
-        
+                $emailBody = 'Hi '.$userName.'You have received a new message from '.$sender.' '.$request->message.'For replying to this message please go to Your Frezylist Inbox or click on following link. '.$conversationLInk;
+                $view = 'frontend.messages.sendMessageToSellerMail';
+
                 Mail::send(new SendMessageToSeller($to, $userName, $sender, $emailSubject, $emailBody, $view, $conversationLInk, $request->message));
-        
+
                 // $saveLog = new EmailLogService();
                 // $saveLog->saveLog($property->id, Auth::id(), $property->user_id, $emailSubject, $emailBody, config('constant.property_type.' . $property->property_type), url()->previous());
-                }
+            }
 
             return redirect()->back()->withFlashSuccess('Message has been sent');
         }

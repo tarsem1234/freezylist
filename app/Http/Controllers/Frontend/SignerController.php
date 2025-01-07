@@ -160,16 +160,13 @@ class SignerController extends Controller
                 $user = User::where('confirmation_code', $token)->with('user_profile', 'business_profile')->first();
                 // return redirect()->route('frontend.userCreate')->with('user',$user);                    // New user needs register all data.
                 if (! empty($user->state_id)) {
-                $state = State::where('id', $user->state_id)->pluck('state')->first();
-                }
-                else
-                {
+                    $state = State::where('id', $user->state_id)->pluck('state')->first();
+                } else {
                     $state = null;
                 }
                 if ($user) {
                     return view('frontend.userRegister.userCreate', compact('user', 'state'));
-                }
-                else {
+                } else {
 
                     return redirect()->route('frontend.auth.login')->with('flash_danger', 'Invalid URL.');
                 }
