@@ -13,6 +13,8 @@ class ConversationMessageRequest extends FormRequest
      */
     public function rules()
     {
-        return ['message' => 'required'];
+        return ['message' => [
+                'required',
+            ],];
     }
 }
