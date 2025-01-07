@@ -12,6 +12,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Request;
 use Illuminate\View\View;
 
 class ForumController extends Controller
@@ -94,7 +95,7 @@ class ForumController extends Controller
     public function forumRepliesShow($id)
     {
         if ($id) {
-            $ip = \Request::ip();
+            $ip = Request::ip();
             $forum = Forum::where('id', $id)->with(['forumViews' => function ($query) use ($ip) {
                 $query->where('ip', $ip);
             }, 'replies' => function ($query1) {
