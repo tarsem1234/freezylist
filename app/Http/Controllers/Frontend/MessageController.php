@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Http\Requests\Frontend\ConversationMessageRequest;
 use App\Http\Controllers\Controller;
 use App\Mail\Frontend\SendMessageToSeller;
 use App\Models\Access\User\User;
@@ -61,16 +62,13 @@ class MessageController extends Controller
         return view('frontend.messages.index', compact('messages'));
     }
 
-    public function conversation(Request $request, $id)
+    public function conversation(ConversationMessageRequest $request, $id)
     {
         $id = decrypt($id);
         if (User::where('id', $id)->withTrashed()->exists()) {
             $fromUser = User::withTrashed()->find($id);
             if ($request->isMethod('post')) {
                 if ($request->isMethod('post')) {
-                    $this->validate($request, [
-                        'message' => 'required',
-                    ]);
                     $message = new Message;
                     $message->user_id = Auth::id();
                     $message->to_user_id = $id;
