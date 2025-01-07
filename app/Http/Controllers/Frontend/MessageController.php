@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Requests\Frontend\ConversationMessageRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Frontend\ConversationMessageRequest;
 use App\Mail\Frontend\SendMessageToSeller;
 use App\Models\Access\User\User;
 use App\Models\Message;
