@@ -1,0 +1,127 @@
+.register-page .register-banner {
+  background-image: url("/storage/site-images/contact-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 40px;
+  background-position: right;
+}
+
+.register-page .register-banner .text {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.register-page .register-banner .text .wrapper {
+  background-color: #f6f6f6;
+}
+
+.register-page .form-group {
+  margin-bottom: 0;
+}
+
+.register-page .form-group p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #222222;
+  margin-right: 18px;
+}
+
+.register-page .form-group h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #222222;
+  line-height: 20px;
+  text-align: left;
+}
+
+.register-page .text-bottom {
+  font-weight: 700;
+  margin: 10px 20px 20px 20px;
+}
+
+.register-page .blue-text {
+  color: #25bbe2;
+}
+
+.register-page .panel-default .panel-heading {
+  color: #25bbe2;
+  background-color: transparent;
+  border-color: transparent;
+  text-align: center;
+  font-size: 32px;
+}
+
+.register-page .panel-default .panel-heading .black-text {
+  color: #000000;
+}
+
+.register-page .space {
+  margin-top: 50px;
+}
+
+.register-page .files {
+  min-width: 264px;
+  float: left;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  padding-left: 27px;
+}
+
+@media screen and (max-width: 767px) {
+  .register-page .panel {
+    padding: 0px !important;
+  }
+  .register-page .register-banner .text {
+    font-size: 36px !important;
+    padding: 60px 20px !important;
+  }
+}
+
+@media screen and (max-device-width: 520px) {
+  .register-page .register-banner .text {
+    font-size: 28px !important;
+    padding: 40px 20px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register-page label {
+    float: none;
+    width: 100%;
+  }
+  .register-page .register-banner .text {
+    font-size: 25px;
+  }
+  .register-page .panel-default .panel-heading {
+    font-size: 22px;
+  }
+  .register-page .panel {
+    padding: 0px;
+    margin-bottom: 20px;
+    border: 0px;
+  }
+  .register-page .panel .form-group
+.checkbox label {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/*Static CSS Start*/
+.register-page .register-banner {
+  background-position: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.register-page .text-bottom {
+  margin: 10px 20px 20px;
+}
+
+/*Static CSS End*/

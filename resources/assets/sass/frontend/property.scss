@@ -1,0 +1,334 @@
+@import "register.scss";
+@import "dashboard.scss";
+body {
+    background-color: #fff !important;
+} 
+.hidden_item {
+    display: none;
+}
+.rent-page{
+    padding-bottom: 30px; 
+    .panel {
+        border: none !important;
+        -webkit-box-shadow:none !important;
+        box-shadow: none!important; 
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    info-box-rent{
+        margin-top: 10px;
+    }
+    .checkbox{ 
+        .styled-checkbox + label {
+            font-weight: 700;
+            color: #8c8c83;
+            font-size: 14px  ! important; 
+        }
+    }
+    [type="radio"] + label{
+        font-weight: 700; 
+        color: #8c8c83 ! important;
+    }
+    .checkbox input[type="checkbox"]{
+        display: none;
+    }
+    .alert-danger {
+        background-color: #fff;
+        border: none;
+    }
+    .info-box-rent {
+        margin-top: 10px;
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        color: #8c8c83;
+    }
+    .register-page{  
+        .register-banner {
+            margin-bottom: 10px !important;
+            .panel {
+                margin-bottom: 0;
+                .form-group{
+                    h4 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    label {
+        margin-bottom: 10px;
+    }
+    h6 {
+        font-size: 14px;
+        color: #111;
+    }
+    .more-button a{
+        background: #000;
+        padding: 6px 20px;
+        color: #fff;
+        display: block;
+        text-align: right;
+        font-size: 12px;
+    }
+    .more-button a.add {
+        text-align: center
+    }
+    .more-button {
+        text-align: center;
+        float: right ! important;
+        width: 100px;
+        label { 
+            margin-bottom: 0;
+        }
+    }
+    input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+    .choose-button{
+        display: inline-block;
+        width: 100%;
+        float: left;
+        min-height: 40px;
+    }
+    .m-t{
+        margin-top: 10px;
+    }
+    h4 {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #000;
+        line-height: 24px;
+    }
+    .form-horizontal { 
+        .form-group {
+            margin-left: 0;
+            margin-right: 0;
+            float: left;
+            width: 100%;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .file_error {
+        padding-bottom: 5px;
+    }
+    .errorEdit {
+        display: none;
+        margin-bottom: 10px;
+    }
+    .image_info_text{
+        color: #848282;
+        font-size: 13px;
+        margin: 0px 0px 10px 0px;
+        line-height:20px;
+    }
+    h6:first-child { 
+        margin-bottom: 5px;
+    }
+}
+
+/*.upload-img-area {
+    .new-img-area {
+        float: left;
+        width: 23%;
+        position: relative;
+        margin: 0 1.5% 1.5% 0;
+        .file-upload__input {
+            text-align: center;
+            box-shadow: 12px 0 1px -8px #fff;
+        }
+    }
+    .clear {
+        clear: both;
+    }
+    .new-img-area:nth-child(4n+1) {clear: left;}
+    .image-holder-col :nth-child(4n+0).new-img-area {
+        margin-right: 0;
+        clear: right;
+    }
+}*/
+
+.add-property {
+    .select {
+        .select__arrow {
+            margin-top: -13px;
+        }
+    }
+    span.delete-image {
+        position: absolute;
+        right: 6px;
+        z-index: 9;
+        top: 12px;
+        cursor: pointer;
+    }
+    .submit-listing {
+        float: left;
+        width: 100%;
+        padding-top: 25px;
+    }
+    .info-box-rent label {
+        float: left;
+        width: 100%;
+        /*max-height: 45px !important;*/
+    }
+    .select2-container {
+        margin-bottom: 20px;
+        width: 100% !important;
+    }
+    #agree-error, #display_phone-error {
+        display: none;
+        color: #ff0000;
+        font-size: 12.5px;
+        padding-bottom: 20px;
+        float: left;
+        width: 100%;
+        font-weight: 400;
+    }
+    .info-box-rent.form-group .checkbox label:before {
+        margin-bottom: 0;
+    }
+    label#postal_code-error {
+        padding-bottom: 0;
+        margin-top: -20px;
+        margin-bottom: 0 !important;
+    }
+    form .form-group textarea#available_weeks::placeholder {
+        font-size: 12px;
+        text-transform: initial;
+        color: #444 !important;
+    }
+}
+
+#stored-photos{
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    a{
+        width: 100%;
+        float: left;
+        img{
+            width: 100%;
+            height: 200px;
+        }
+    }
+    button{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        background: transparent;
+        border: none;
+    }
+    #stored-photos-btn{
+        color: #2bc0df;
+        font-size: 22px;
+    }
+}
+.upload_photo_property{
+    float: left;
+    width: 100%;
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1400px) {
+    form {
+        .upload-img-area {
+            .new-img-area {
+                width: 22%;
+                margin-right: 3.9%;
+            }
+            span.delete-image {
+                right: -5px;
+            }
+            input.files {
+                padding-right: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1300px) {
+    body {
+        .upload-img-area {
+            .image-holder-col :nth-child(4n+0).new-img-area {
+                margin-right: 1.5%;
+                clear: none;
+            }
+            .image-holder-col :nth-child(3n+0).new-img-area {
+                margin-right: 0;
+                clear: right;
+            }
+            .new-img-area:nth-child(3n+1) {clear: left !important;}
+            .new-img-area:nth-child(4n+1) {clear: none;}
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .register-page { 
+        .register-banner {
+            margin-bottom: 20px !important;
+        }
+    }
+    .rent-page {
+        padding-bottom: 10px;
+        form {
+            padding-left: 20px;
+            padding-right: 20px;
+            .upload-img-area{
+                .new-img-area {
+                    width: 100%;
+                    input.more-option {
+                        padding-right: 25px;
+                    }
+                    span.delete-image {
+                        right: 15px;
+                    }
+                    img.tmpImage {
+                        width: 99%;
+                        margin-bottom: 8px;
+                        height:auto;
+                    }
+                }
+            }
+        }
+        .register-page{ 
+            .register-banner {
+                margin-bottom: 0px !important;
+            }
+            .info-box-rent {
+                margin-top: 0;
+            }
+        }
+        .info-box-rent {
+            label {
+                max-height: none !important;
+            }
+        }
+        .panel-body {
+            padding: 0px  !important;
+        }
+    }
+    #stored-photos {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .col-xs-6 {
+        width: 100% ! important;
+    }
+    .register-page{
+        [type="radio"] + label {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+}
+
